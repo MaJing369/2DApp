@@ -28,6 +28,7 @@ var game_file_list = [
 	"bin-debug/utils/Log.js",
 	"bin-debug/utils/ThemeAdapter.js",
 	"bin-debug/utils/ToolMod.js",
+	"bin-debug/utils/ShowViewEffect.js",
 	//----auto game_file_list end----
 ];
 

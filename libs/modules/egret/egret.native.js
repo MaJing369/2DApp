@@ -540,9 +540,9 @@ var egret;
                     }
                     var index = this.$clipList.indexOf(this.$saveCount);
                     if (index != -1) {
-                        var length_1 = this.$clipList.length;
-                        this.$clipList.splice(index, length_1 - index);
-                        for (; index < length_1; index++) {
+                        var length = this.$clipList.length;
+                        this.$clipList.splice(index, length - index);
+                        for (; index < length; index++) {
                             this.checkSurface();
                             native.$cmdManager.setContext(this.$nativeContext);
                             native.$cmdManager.popClip();
@@ -1279,9 +1279,9 @@ var egret;
                     }
                     var index = this.$clipList.indexOf(this.$saveCount);
                     if (index != -1) {
-                        var length_2 = this.$clipList.length;
-                        this.$clipList.splice(index, length_2 - index);
-                        for (; index < length_2; index++) {
+                        var length = this.$clipList.length;
+                        this.$clipList.splice(index, length - index);
+                        for (; index < length; index++) {
                             this.checkSurface();
                             this.$nativeContext.popClip();
                         }
@@ -2713,6 +2713,7 @@ var egret;
                 else {
                     console.log("meshVertices not exist");
                 }
+                this.vertices = vertices;
             };
             /**
              * @private
@@ -3541,6 +3542,7 @@ var egret;
                 else {
                     console.log("meshVertices not exist");
                 }
+                this.vertices = vertices;
             };
             /**
              * @private
@@ -4183,7 +4185,7 @@ var egret;
                 /*
                  * 存储字符串的数组
                  */
-                this.strArray = [];
+                this.strArray = new Array();
             }
             var d = __define,c=CmdManager,p=c.prototype;
             /*
@@ -4698,9 +4700,9 @@ var egret;
         if (DEBUG) {
             egret.log = function () {
                 if (DEBUG) {
-                    var length_3 = arguments.length;
+                    var length = arguments.length;
                     var info = "";
-                    for (var i = 0; i < length_3; i++) {
+                    for (var i = 0; i < length; i++) {
                         info += arguments[i] + " ";
                     }
                     egret.sys.$logToFPS(info);
@@ -5727,14 +5729,14 @@ var egret;
                 this.loading = true;
                 this.loaded = false;
                 if (cache && !egret_native.isFileExists(url)) {
-                    var self_1 = this;
+                    var self = this;
                     var promise = egret.PromiseObject.create();
                     promise.onSuccessFunc = function () {
-                        self_1.loadEnd();
+                        self.loadEnd();
                     };
                     promise.onErrorFunc = function () {
                         egret.$warn(1048);
-                        self_1.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
+                        self.dispatchEventWith(egret.IOErrorEvent.IO_ERROR);
                     };
                     egret_native.download(url, url, promise);
                 }
@@ -6973,8 +6975,6 @@ var egret;
              */
             p.$show = function () {
                 var self = this;
-                var textfield = this.$textfield;
-                var values = textfield.$TextField;
                 egret_native.TextInputOp.setKeybordOpen(false);
                 egret_native.EGT_getTextEditerContentText = function () {
                     return self.$getText();
@@ -6985,16 +6985,13 @@ var egret;
                     self.showScreenKeyboard();
                     egret_native.EGT_keyboardDidShow = function () {
                     };
-                    if (egret_native.TextInputOp.updateConfig) {
-                        egret_native.TextInputOp.updateConfig(JSON.stringify({
-                            "font_color": values[2 /* textColor */]
-                        }));
-                    }
                 };
                 egret_native.EGT_keyboardDidHide = function () {
                 };
                 egret_native.EGT_deleteBackward = function () {
                 };
+                var textfield = this.$textfield;
+                var values = textfield.$TextField;
                 var inputType = values[37 /* inputType */];
                 var inputMode = values[30 /* multiline */] ? 0 : 6;
                 var inputFlag = -1; //textfield.displayAsPassword ? 0 : -1;

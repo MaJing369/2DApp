@@ -10,6 +10,7 @@ class LoadingUI extends egret.Sprite {
     
     private onResourceLoadComplete(e:RES.ResourceEvent):void
     {
+        if(e.groupName != "logo") return;
         RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this);
         this._imgLogo = new eui.Image();
         this._imgLogo.texture = RES.getRes("logo_png");
@@ -25,9 +26,12 @@ class LoadingUI extends egret.Sprite {
         if(this._imgLogo)
         {
             egret.Tween.removeTweens(this._imgLogo);
-            this._imgLogo.texture.dispose();
-            this.removeChild(this._imgLogo);
-            this._imgLogo = null;
+            if(this._imgLogo)
+            {
+                if(this._imgLogo.texture)this._imgLogo.texture.dispose();
+                this.removeChild(this._imgLogo);
+                this._imgLogo = null;
+            }
         }
         
         if(this._txtField)
@@ -42,7 +46,7 @@ class LoadingUI extends egret.Sprite {
         this._txtField.y = 400;
         this._txtField.width = 480;
         this._txtField.height = 100;
-        this._txtField.x = (AppManager.LayerManager.stage.stageWidth - this._txtField.width) / 2;
+        this._txtField.x = (App.LayerManager.stage.stageWidth - this._txtField.width) / 2;
         this._txtField.textAlign = "center";
         this._txtField.textColor = 0xC30E21
     }

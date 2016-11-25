@@ -67,7 +67,7 @@ module Core
         private toScene():void
         {
             this._curScene = new this._curSceneClass();
-            AppManager.LayoutManager.register(this._curScene);
+            App.LayoutManager.register(this._curScene);
             this.clearScene();
             this._layer.addChild(this._curScene);
         }

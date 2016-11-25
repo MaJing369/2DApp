@@ -239,7 +239,7 @@ module Core
         private onClientWindowResize():void
         {
             LayoutManager.self.update();
-            AppManager.EventDispatcher.dispatchEvent(new egret.Event(EventName.STAGE_RESIZE));
+            App.EventDispatcher.dispatchEvent(new egret.Event(EventName.STAGE_RESIZE));
         }
 
         private getClientWindowSize():void
@@ -268,15 +268,15 @@ module Core
                 this.windowWidth = this.windowHeight;
                 this.windowHeight = temp;
             }
-            this.scaleX = this.windowWidth / AppManager.LayerManager.stage.stageWidth;
-            this.scaleY = this.windowHeight / AppManager.LayerManager.stage.stageHeight;
+            this.scaleX = this.windowWidth / App.LayerManager.stage.stageWidth;
+            this.scaleY = this.windowHeight / App.LayerManager.stage.stageHeight;
             this.displayScale = Math.max(this.scaleX,this.scaleY);
             this.scaleX = this.scaleX / this.displayScale;
             this.scaleY = this.scaleY / this.displayScale;
             this.clientWidth = Math.round(this.windowWidth / this.displayScale);
             this.clientHeight = Math.round(this.windowHeight / this.displayScale);
-            this.clientLeft = Math.round((AppManager.LayerManager.stage.stageWidth - this.windowWidth / this.displayScale) / 2);
-            this.clientTop = Math.round((AppManager.LayerManager.stage.stageHeight - this.windowHeight / this.displayScale) / 2);
+            this.clientLeft = Math.round((App.LayerManager.stage.stageWidth - this.windowWidth / this.displayScale) / 2);
+            this.clientTop = Math.round((App.LayerManager.stage.stageHeight - this.windowHeight / this.displayScale) / 2);
 
             var windowAspectRatio: number = this.windowHeight / this.windowWidth;
             if(windowAspectRatio < LayoutManager.aspectRatioLimitLow)
@@ -325,8 +325,8 @@ module Core
                 {
                     child = childLocMap.keyList[i];
                     childLoc = childLocMap.getValue(child);
-                    child.x = childLoc[0] * this.scaleX - child.width * (1 - this.scaleX) * childLoc[0] / AppManager.LayerManager.stage.stageWidth;
-                    child.y = childLoc[1] * this.scaleY - child.height * (1 - this.scaleY) * childLoc[1] / AppManager.LayerManager.stage.stageHeight;
+                    child.x = childLoc[0] * this.scaleX - child.width * (1 - this.scaleX) * childLoc[0] / App.LayerManager.stage.stageWidth;
+                    child.y = childLoc[1] * this.scaleY - child.height * (1 - this.scaleY) * childLoc[1] / App.LayerManager.stage.stageHeight;
                     if(this._childScaleRatio < 1)
                     {
                         child.x += child.width * (1 - this._childScaleRatio) * child.x / (dc.width - child.width);

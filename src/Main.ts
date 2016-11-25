@@ -8,7 +8,7 @@ class Main extends eui.UILayer {
     protected createChildren(): void 
     {
         super.createChildren();
-        AppManager.LayerManager.init(this.stage);
+        App.LayerManager.init(this.stage);
         Log.initDebug(true)//location.href.indexOf("debug=1") >= 0);
         
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE,this.onConfigComplete,this);
@@ -82,9 +82,9 @@ class Main extends eui.UILayer {
         RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS,this.onResourceProgress,this);
         RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,this.onItemLoadError,this);
         
-        AppManager.init();
-        AppManager.LayerManager.bg.loadFromTexture("sc1bg_png" , 2)
-        AppManager.ScenesManager.switchScene(View.TestScene,"test");
-        AppManager.SoundManager.playBgSound("music")
+        App.init();
+        App.LayerManager.bg.loadFromTexture("sc1bg_png" , 2)
+        App.ScenesManager.switchScene(View.TestScene,"test");
+        App.SoundManager.playBgSound("music")
     }
 }

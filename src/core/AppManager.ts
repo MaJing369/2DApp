@@ -1,4 +1,4 @@
-class AppManager {
+class App {
     
     public static get LayerManager():Core.LayerManager
     {
@@ -30,10 +30,15 @@ class AppManager {
         return Core.EventDispatcher.getInstance();
     }
     
+    public static get ShowViewEffect(): ShowViewEffect
+    {
+        return ShowViewEffect.getInstance();
+    }
+    
     public static init(): void
     {
-        AppManager.LayoutManager.init();
-        AppManager.ScenesManager.init(AppManager.LayerManager.sceneLayer);
-        AppManager.UIViewManager.init(AppManager.LayerManager.uiLayer);
+        App.LayoutManager.init();
+        App.ScenesManager.init(App.LayerManager.sceneLayer);
+        App.UIViewManager.init(App.LayerManager.uiLayer);
     }
 }

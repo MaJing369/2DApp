@@ -44,32 +44,32 @@ module View {
             {
                 case this.btn1:
                 {
-                    AppManager.LayerManager.bg.loadFromTexture("sc1bg_png", 1);
+                    App.LayerManager.bg.loadFromTexture("sc1bg_png", 1);
                     break;
                 }
                 case this.btn2:
                 {
-                    AppManager.LayerManager.bg.loadFromTexture("sc1bg_png", 2);
+                    App.LayerManager.bg.loadFromTexture("sc1bg_png", 2);
                     break;
                 }
                 case this.btn3:
                 {
-                    AppManager.LayerManager.bg.loadFromTexture("sc1bg_png", 3);
+                    App.LayerManager.bg.loadFromTexture("sc1bg_png", 3);
                     break;
                 }
                 case this.btn4:
                 {
-                    AppManager.LayerManager.bg.loadFromTexture("sc1bg_png", 4);
+                    App.LayerManager.bg.loadFromTexture("sc1bg_png", 4);
                     break;
                 }
                 case this.btn5:
                 {
-                    AppManager.LayerManager.bg.loadFromTexture("sc1bg_png", 5);
+                    App.LayerManager.bg.loadFromTexture("sc1bg_png", 5);
                     break;
                 }
                 case this.btn6:
                 {
-                    AppManager.LayerManager.bg.loadFromTexture("sc1bg_png", 6);
+                    App.LayerManager.bg.loadFromTexture("sc1bg_png", 6);
                     break;
                 }
             }

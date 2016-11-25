@@ -27,6 +27,7 @@ module Core {
             {
                 this._active = false;
                 this._skinResName = null;
+                App.EventDispatcher.removeEventListener(EventName.STAGE_RESIZE,this.reSize,this);
                 ToolMod.clearDisplayContainer(this);
             }
         }
@@ -42,6 +43,7 @@ module Core {
             if(BaseEuiView.FULL_ZOOM)
             {
                 this.lockViewWithinWindow();
+                App.EventDispatcher.addEventListener(EventName.STAGE_RESIZE,this.reSize,this);
             }
         }
         
@@ -49,8 +51,8 @@ module Core {
         {
             if(this.parent)
             {
-                this._canvasWidth = AppManager.LayoutManager.clientWidth;
-                this._canvasHeight = AppManager.LayoutManager.clientHeight;
+                this._canvasWidth = App.LayoutManager.clientWidth;
+                this._canvasHeight = App.LayoutManager.clientHeight;
                 if(this._canvasWidth < this.width || this._canvasHeight < this.height)
                 {
                     this._scale = Math.min(this._canvasWidth / this.width,this._canvasHeight / this.height);
