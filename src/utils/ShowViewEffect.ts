@@ -5,6 +5,10 @@
  */
 class ShowViewEffect extends Core.BaseSingleton{
     private _dc:egret.DisplayObjectContainer
+    /**
+     * @param dc 
+     * @param type 1 egret.Ease.elasticOut  2 egret.Ease.cubicOut
+     */
     public showEffect(dc:egret.DisplayObjectContainer , type:number):void
     {
         this._dc = dc;
@@ -36,27 +40,29 @@ class ShowViewEffect extends Core.BaseSingleton{
 
     private showSceneEffect_3(): void
     {
+        this._dc.alpha = 0;
         this._dc.x = -App.LayerManager.stage.stageWidth;
-        egret.Tween.get(this._dc).to({ x: 0 },600,egret.Ease.cubicOut).call(this.onAddSceneBreak,this);
+        egret.Tween.get(this._dc).to({ x: 0, alpha: 1},1000,egret.Ease.cubicOut).call(this.onAddSceneBreak,this);
     }
 
     private showSceneEffect_4(): void 
     {
+        this._dc.alpha = 0;
         this._dc.x = App.LayerManager.stage.stageWidth;
-        egret.Tween.get(this._dc).to({ x: 0 },600,egret.Ease.cubicOut).call(this.onAddSceneBreak,this);
+        egret.Tween.get(this._dc).to({ x: 0, alpha: 1 },1000,egret.Ease.cubicOut).call(this.onAddSceneBreak,this);
     }
 
     private showSceneEffect_5(): void
     {
         this._dc.y = -App.LayerManager.stage.stageHeight;
-        egret.Tween.get(this._dc).to({ y: 0 },600,egret.Ease.bounceOut).call(this.onAddSceneBreak,this);
+        egret.Tween.get(this._dc).to({ y: 0 },1000,egret.Ease.bounceOut).call(this.onAddSceneBreak,this);
     }
 
     private showSceneEffect_6(): void 
     {
         this._dc.y = App.LayerManager.stage.stageHeight;
 
-        egret.Tween.get(this._dc).to({ y: 0 },600,egret.Ease.cubicOut).call(this.onAddSceneBreak,this);
+        egret.Tween.get(this._dc).to({ y: 0 },1000,egret.Ease.cubicOut).call(this.onAddSceneBreak,this);
     }
 
     private onAddSceneBreak(): void 

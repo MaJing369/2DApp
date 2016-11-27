@@ -48,7 +48,6 @@ class LoadingUI extends egret.Sprite {
         this._txtField.height = 100;
         this._txtField.x = (App.LayerManager.stage.stageWidth - this._txtField.width) / 2;
         this._txtField.textAlign = "center";
-        this._txtField.textColor = 0xC30E21
     }
 
     public setProgress(current:number, total:number):void {

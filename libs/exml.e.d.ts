@@ -1,3 +1,5 @@
+declare class page1Skin extends eui.Skin{
+}
 declare class TestSkin extends eui.Skin{
 }
 declare module skins{

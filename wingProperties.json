@@ -143,6 +143,26 @@
 					"isFolder":false,
 					"key":"logo_png",
 					"name":"logo_png"
+				},
+				{
+					"isFolder":false,
+					"key":"btn_png",
+					"name":"btn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"down_bg_png",
+					"name":"down_bg_png"
+				},
+				{
+					"isFolder":false,
+					"key":"yi_png",
+					"name":"yi_png"
+				},
+				{
+					"isFolder":false,
+					"key":"zyll_png",
+					"name":"zyll_png"
 				}
 			]
 		}

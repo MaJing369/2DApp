@@ -1,6 +1,7 @@
 {
   "autoGenerateExmlsList": true,
   "exmls": [
+    "resource/2D_skins/page1Skin.exml",
     "resource/2D_skins/TestSkin.exml",
     "resource/eui_skins/ButtonSkin.exml",
     "resource/eui_skins/CheckBoxSkin.exml",

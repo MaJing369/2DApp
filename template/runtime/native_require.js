@@ -9,6 +9,7 @@ var game_file_list = [
 	"libs/modules/tween/tween.js",
 	"bin-debug/app/event/EventName.js",
 	"bin-debug/core/base/BaseEuiScene.js",
+	"bin-debug/app/scenes/Page_1.js",
 	"bin-debug/app/scenes/TestScene.js",
 	"bin-debug/core/AppManager.js",
 	"bin-debug/core/base/BaseEuiView.js",
@@ -26,9 +27,9 @@ var game_file_list = [
 	"bin-debug/utils/HashMap.js",
 	"bin-debug/utils/LoadingUI.js",
 	"bin-debug/utils/Log.js",
+	"bin-debug/utils/ShowViewEffect.js",
 	"bin-debug/utils/ThemeAdapter.js",
 	"bin-debug/utils/ToolMod.js",
-	"bin-debug/utils/ShowViewEffect.js",
 	//----auto game_file_list end----
 ];
 

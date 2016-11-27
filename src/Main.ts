@@ -83,8 +83,8 @@ class Main extends eui.UILayer {
         RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,this.onItemLoadError,this);
         
         App.init();
-        App.LayerManager.bg.loadFromTexture("sc1bg_png" , 2)
-        App.ScenesManager.switchScene(View.TestScene,"test");
-        App.SoundManager.playBgSound("music")
+        App.LayerManager.bg.loadFromTexture("sc1bg_png" , 2);
+        App.SoundManager.playBgSound("music");
+        App.ScenesManager.switchScene(View.Page_1,"page1");
     }
 }
