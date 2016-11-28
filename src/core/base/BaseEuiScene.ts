@@ -24,9 +24,20 @@ module Core
             {
                 this.skinName = null;
                 this._skinResName = null;
+//                ToolMod.clearDisplayContainer(this,true,true,true);
                 this._active = false;
-                ToolMod.clearDisplayContainer(this,true,true,true);
             }
+        }
+        
+        protected childrenCreated(): void
+        {
+            super.childrenCreated();
+            this.init();
+        }
+        
+        public init():void
+        {
+            
         }
 
         public get skinResName(): string

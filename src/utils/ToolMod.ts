@@ -44,4 +44,24 @@ class ToolMod
             if(clearChild && dis["numChildren"]) this.clearDisplayContainer(dis as egret.DisplayObjectContainer,clearContent,clearChild);
         }
     }
+    
+    /**
+        * 延时调用
+        */
+    public static delayApply(time: number,thisObject: any,func: Function,argList: any[] = null): number
+    {
+        return setTimeout((thisObject: any) =>
+        {
+            func.apply(thisObject,argList);
+        },time,thisObject,argList);
+    }
+
+
+    /**
+     * 清除延时调用
+     */
+    public static clearDelayApply(handleIdx: number): void
+    {
+        clearTimeout(handleIdx);
+    }
 }

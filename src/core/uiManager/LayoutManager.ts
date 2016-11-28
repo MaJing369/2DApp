@@ -234,12 +234,12 @@ module Core
             {
                 LayoutManager.self.syncToClientSize();
             }
+            App.EventDispatcher.dispatchEvent(new egret.Event(EventName.STAGE_RESIZE));
         }
         
         private onClientWindowResize():void
         {
             LayoutManager.self.update();
-            App.EventDispatcher.dispatchEvent(new egret.Event(EventName.STAGE_RESIZE));
         }
 
         private getClientWindowSize():void

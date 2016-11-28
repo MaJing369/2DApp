@@ -48,6 +48,11 @@ class Main extends eui.UILayer {
         Log.trace("资源包加载完成 " + event.groupName);
         if (event.groupName == "preload") 
         {
+            RES.loadGroup("common");
+            Log.trace("开始加载资源包 preload");
+        }
+        if(event.groupName == "common")
+        {
             this._loadingView.destroy();
             this.stage.removeChild(this._loadingView);
             this.startScene();
@@ -66,10 +71,7 @@ class Main extends eui.UILayer {
     
     private onResourceProgress(event:RES.ResourceEvent):void 
     {
-        if (event.groupName == "preload")
-        {
-            this._loadingView.setProgress(event.itemsLoaded,event.itemsTotal);
-        }
+        this._loadingView.setProgress(event.itemsLoaded,event.itemsTotal);
     }
     
     /**
@@ -83,8 +85,7 @@ class Main extends eui.UILayer {
         RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR,this.onItemLoadError,this);
         
         App.init();
-        App.LayerManager.bg.loadFromTexture("sc1bg_png" , 2);
+        App.LayerManager.bg.loadFromTexture("bg1_png" , 1);
         App.SoundManager.playBgSound("music");
-        App.ScenesManager.switchScene(View.Page_1,"page1");
     }
 }

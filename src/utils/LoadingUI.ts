@@ -18,7 +18,7 @@ class LoadingUI extends egret.Sprite {
         this._imgLogo.x = (this.stage.stageWidth - this._imgLogo.width) / 2 + 110;
         this._imgLogo.y = (this.stage.stageHeight - this._imgLogo.height) / 2 - 10;
         this.addChild(this._imgLogo);
-        egret.Tween.get(this._imgLogo,{ loop: true }).to({ rotation: 180 },1000);
+        egret.Tween.get(this._imgLogo,{ loop: true }).to({ rotation: 360 },2000);
     }
     
     public destroy():void

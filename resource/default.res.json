@@ -5,20 +5,16 @@
 			"name":"preload"
 		},
 		{
-			"keys":"TestSkin_exml",
-			"name":"test"
-		},
-		{
 			"keys":"logo_png",
 			"name":"logo"
 		},
 		{
-			"keys":"sc1bg_png",
-			"name":"bg"
+			"keys":"zyll_png,btn_png,page1Skin_exml,logo_Font_png,logo_Bg_png,down_bg_png",
+			"name":"page1"
 		},
 		{
-			"keys":"zyll_png,down_bg_png,btn_png,yi_png,page1Skin_exml",
-			"name":"page1"
+			"keys":"bg1_png,sc1bg_png_png",
+			"name":"common"
 		}
 	],
 	"resources":[
@@ -163,19 +159,9 @@
 			"url":"2D_common/logo.png"
 		},
 		{
-			"name":"sc1bg_png",
-			"type":"image",
-			"url":"2D_bg/sc1bg.png"
-		},
-		{
 			"name":"zyll_png",
 			"type":"image",
 			"url":"2D_ui/page1/zyll.png"
-		},
-		{
-			"name":"down_bg_png",
-			"type":"image",
-			"url":"2D_ui/page1/down_bg.png"
 		},
 		{
 			"name":"btn_png",
@@ -183,14 +169,34 @@
 			"url":"2D_ui/page1/btn.png"
 		},
 		{
-			"name":"yi_png",
-			"type":"image",
-			"url":"2D_ui/page1/yi.png"
-		},
-		{
 			"name":"page1Skin_exml",
 			"type":"text",
 			"url":"2D_skins/page1Skin.exml"
+		},
+		{
+			"name":"logo_Font_png",
+			"type":"image",
+			"url":"2D_ui/page1/logo_Font.png"
+		},
+		{
+			"name":"logo_Bg_png",
+			"type":"image",
+			"url":"2D_ui/page1/logo_Bg.png"
+		},
+		{
+			"name":"down_bg_png",
+			"type":"image",
+			"url":"2D_ui/page1/down_bg.png"
+		},
+		{
+			"name":"bg1_png",
+			"type":"image",
+			"url":"2D_common/bg1.png"
+		},
+		{
+			"name":"sc1bg_png_png",
+			"type":"image",
+			"url":"2D_common/sc1bg_png.png"
 		}
 	]
 }

@@ -19,9 +19,6 @@ module Core.Views
         
     	  public constructor(width:number, height:number)
     	  {
-            RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResLoadComplete,this);
-            RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResLoadError,this);
-            RES.loadGroup("bg");
             this._content = new egret.DisplayObjectContainer();
             this._width = width;
             this._height = height;
@@ -31,7 +28,6 @@ module Core.Views
     	
     	  public destroy():void
     	  {
-            this.removeResLoadEvents();
     	      this.clear();
             this._content = null;
     	  }
@@ -70,32 +66,13 @@ module Core.Views
                   bmp.height = App.LayerManager.stage.stageHeight;
                   this._content.addChild(bmp);
               }
-              App.ShowViewEffect.showEffect(this._content,this._effectType);
+              App.ShowViewEffect.showEffect(this._content,this._effectType,this.viewEffectStop,this);
     	  }
     	  
-
-        private onResLoadComplete(e: RES.ResourceEvent): void
-        {
-            if(e.groupName == this._resGroupName)
-            {
-                this.removeResLoadEvents();
-                this.loadTexture();
-            }
-        }
-
-        private onResLoadError(e: RES.ResourceEvent): void
-        {
-            if(e.groupName == this._resGroupName)
-            {
-                this.removeResLoadEvents();
-            }
-        }
-        
-        private removeResLoadEvents():void
-        {
-            RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResLoadComplete,this);
-            RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR,this.onResLoadError,this);
-        }
+    	  private viewEffectStop():void
+    	  {
+        	  App.EventDispatcher.dispatchEvent(new egret.Event(EventName.SWITCHSCENE));
+    	  }
     	
     	  public clear():void
     	  {

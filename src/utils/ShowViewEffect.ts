@@ -4,14 +4,18 @@
  *
  */
 class ShowViewEffect extends Core.BaseSingleton{
-    private _dc:egret.DisplayObjectContainer
+    private _dc:egret.DisplayObjectContainer;
+    private _backFun:Function;
+    private _thisObj:any;
     /**
      * @param dc 
      * @param type 1 egret.Ease.elasticOut  2 egret.Ease.cubicOut
      */
-    public showEffect(dc:egret.DisplayObjectContainer , type:number):void
+    public showEffect(dc:egret.DisplayObjectContainer, type:number, backFun:Function=null, thisObj:any=null):void
     {
         this._dc = dc;
+        this._backFun = backFun;
+        this._thisObj = thisObj;
         this["showSceneEffect_" + type]();
     }
     private showSceneEffect_1(): void 
@@ -22,8 +26,8 @@ class ShowViewEffect extends Core.BaseSingleton{
         this._dc.x = App.LayerManager.stage.stageWidth / 4;
         this._dc.y = App.LayerManager.stage.stageHeight / 4;
         egret.Tween.get(this._dc)
-            .to({ alpha: 1,scaleX: 1,scaleY: 1,x: 0,y: 0 },800,egret.Ease.backOut)
-            .call(this.onAddSceneBreak,this);
+        .to({ alpha: 1,scaleX: 1,scaleY: 1,x: 0,y: 0 },800,egret.Ease.backOut)
+        .call(this.onAddSceneBreak,this);
     }
 
     private showSceneEffect_2(): void 
@@ -68,6 +72,12 @@ class ShowViewEffect extends Core.BaseSingleton{
     private onAddSceneBreak(): void 
     {
         egret.Tween.removeTweens(this._dc);
-        App.EventDispatcher.dispatchEvent(new egret.Event(EventName.SWITCHSCENE));
+        if(this._backFun)
+        {
+            this._backFun.apply(this._thisObj);
+        }
+        
+        this._backFun = null;
+        this._thisObj = null;
     }
 }

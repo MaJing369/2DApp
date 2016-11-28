@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="page1Skin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="down_bg_png" x="0" y="628"/>
-	<e:Image id="btnInto" source="btn_png" x="166" y="533"/>
-	<e:Image source="zyll_png" x="43" y="61"/>
-	<e:Image source="yi_png" x="33" y="32"/>
+	<e:Image id="imgLogoBg" source="logo_Bg_png" x="14" y="12"/>
+	<e:Image id="imgLogoFont" source="logo_Font_png" x="57" y="49"/>
+	<e:Image id="imgFont" source="zyll_png" x="37" y="100"/>
+	<e:Image id="imgInto" source="btn_png" x="235" y="592" anchorOffsetX="84" anchorOffsetY="26"/>
 </e:Skin>
