@@ -32,6 +32,11 @@ module Core {
             }
         }
         
+        public init():void
+        {
+            
+        }
+        
         public onClose():void
         {
             
@@ -45,6 +50,8 @@ module Core {
                 this.lockViewWithinWindow();
                 App.EventDispatcher.addEventListener(EventName.STAGE_RESIZE,this.reSize,this);
             }
+            
+            this.init();
         }
         
         private lockViewWithinWindow(): void

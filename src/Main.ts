@@ -86,6 +86,7 @@ class Main extends eui.UILayer {
         
         App.init();
         App.LayerManager.bg.loadFromTexture("bg1_png" , 1);
+        App.ScenesManager.switchScene(View.Page1,"page1")
         App.SoundManager.playBgSound("music");
     }
 }

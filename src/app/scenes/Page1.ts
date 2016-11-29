@@ -4,7 +4,7 @@ module View {
 	 * @author 
 	 *
 	 */
-	export class Page_1 extends Core.BaseEuiScene{
+	export class Page1 extends Core.BaseEuiScene{
         private imgLogoBg:eui.Image;
         private imgLogoFont: eui.Image;
         private imgFont:eui.Image;
@@ -55,8 +55,9 @@ module View {
 		
         private onBtnClick(e:egret.TouchEvent):void
         {
-            this.btnMoveStop();
-            this.showBtnMove();
+            App.LayerManager.bg.loadFromTexture("bg2_png",1);
+            App.ScenesManager.switchScene(View.Page2,"page2")
+            App.UIViewManager.show(View.BtnView,"btnview");
         }
         
         private showBtnMove():void

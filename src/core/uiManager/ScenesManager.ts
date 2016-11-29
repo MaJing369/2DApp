@@ -20,12 +20,21 @@ module Core
         public init(sceneLayer: egret.DisplayObjectContainer): void
         {
             this._layer = sceneLayer;
+            App.EventDispatcher.addEventListener(EventName.SWITCHSCENE,this.backGroundInIt,this);
+        }
+        
+        public backGroundInIt(e:egret.Event):void
+        {
+            if(this._curSceneClass)this.switchScene(this._curSceneClass,this._resGroupName);
         }
 		
         public switchScene(sceneClass:any, resGroupName:string=null):void
         {
+            this.clearScene();
             this._curSceneClass = sceneClass;
             this._resGroupName = resGroupName;
+            
+            if(App.LayerManager.bg.isInit == false)return;
             
             if(resGroupName == null || resGroupName == "" || RES.isGroupLoaded(resGroupName))
             {

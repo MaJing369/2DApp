@@ -9,12 +9,32 @@
 			"name":"logo"
 		},
 		{
-			"keys":"zyll_png,btn_png,page1Skin_exml,logo_Font_png,logo_Bg_png,down_bg_png",
+			"keys":"zyll_png,btn_png,page1Skin_exml,logo_Font_png,logo_Bg_png",
 			"name":"page1"
 		},
 		{
-			"keys":"bg1_png,sc1bg_png_png",
+			"keys":"bg1_png,bg2_png,bg3_png",
 			"name":"common"
+		},
+		{
+			"keys":"zhenjiuBtn_png,tuinaBtn_png,huolongjiuBtn_png,contactmeBtn_png,aijiuBtn_png,BtnViewSkin_exml",
+			"name":"btnview"
+		},
+		{
+			"keys":"title_png,page2Skin_exml",
+			"name":"page2"
+		},
+		{
+			"keys":"ZhenJiu_png,page3Skin_exml",
+			"name":"page3"
+		},
+		{
+			"keys":"aijiu_png",
+			"name":"page4"
+		},
+		{
+			"keys":"huolongjiu_png",
+			"name":"page5"
 		}
 	],
 	"resources":[
@@ -149,11 +169,6 @@
 			"url":"config/description.json"
 		},
 		{
-			"name":"TestSkin_exml",
-			"type":"text",
-			"url":"2D_skins/TestSkin.exml"
-		},
-		{
 			"name":"logo_png",
 			"type":"image",
 			"url":"2D_common/logo.png"
@@ -184,19 +199,79 @@
 			"url":"2D_ui/page1/logo_Bg.png"
 		},
 		{
-			"name":"down_bg_png",
-			"type":"image",
-			"url":"2D_ui/page1/down_bg.png"
-		},
-		{
 			"name":"bg1_png",
 			"type":"image",
 			"url":"2D_common/bg1.png"
 		},
 		{
-			"name":"sc1bg_png_png",
+			"name":"zhenjiuBtn_png",
 			"type":"image",
-			"url":"2D_common/sc1bg_png.png"
+			"url":"2D_ui/btnview/zhenjiuBtn.png"
+		},
+		{
+			"name":"tuinaBtn_png",
+			"type":"image",
+			"url":"2D_ui/btnview/tuinaBtn.png"
+		},
+		{
+			"name":"huolongjiuBtn_png",
+			"type":"image",
+			"url":"2D_ui/btnview/huolongjiuBtn.png"
+		},
+		{
+			"name":"contactmeBtn_png",
+			"type":"image",
+			"url":"2D_ui/btnview/contactmeBtn.png"
+		},
+		{
+			"name":"aijiuBtn_png",
+			"type":"image",
+			"url":"2D_ui/btnview/aijiuBtn.png"
+		},
+		{
+			"name":"BtnViewSkin_exml",
+			"type":"text",
+			"url":"2D_skins/BtnViewSkin.exml"
+		},
+		{
+			"name":"bg2_png",
+			"type":"image",
+			"url":"2D_common/bg2.png"
+		},
+		{
+			"name":"title_png",
+			"type":"image",
+			"url":"2D_ui/page2/title.png"
+		},
+		{
+			"name":"page2Skin_exml",
+			"type":"text",
+			"url":"2D_skins/page2Skin.exml"
+		},
+		{
+			"name":"ZhenJiu_png",
+			"type":"image",
+			"url":"2D_ui/page3/ZhenJiu.png"
+		},
+		{
+			"name":"aijiu_png",
+			"type":"image",
+			"url":"2D_ui/page4/aijiu.png"
+		},
+		{
+			"name":"huolongjiu_png",
+			"type":"image",
+			"url":"2D_ui/page5/huolongjiu.png"
+		},
+		{
+			"name":"page3Skin_exml",
+			"type":"text",
+			"url":"2D_skins/page3Skin.exml"
+		},
+		{
+			"name":"bg3_png",
+			"type":"image",
+			"url":"2D_common/bg3.png"
 		}
 	]
 }

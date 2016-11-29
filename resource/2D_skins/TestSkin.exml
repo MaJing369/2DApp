@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="TestSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Button id="btn1" label="1" x="48" y="47"/>
-	<e:Button id="btn2" label="2" x="191" y="49"/>
-	<e:Button id="btn3" label="3" x="347" y="50"/>
-	<e:Button id="btn4" label="4" x="47" y="117"/>
-	<e:Button id="btn5" label="5" x="192" y="120"/>
-	<e:Button id="btn6" label="6" x="350" y="122"/>
-</e:Skin>

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="BtnViewSkin" width="208" height="392" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image id="btnTuiNa" source="tuinaBtn_png" x="102" y="36" anchorOffsetX="98" anchorOffsetY="30"/>
+	<e:Image id="btnZhenJiu" source="zhenjiuBtn_png" x="102" y="113" anchorOffsetX="98" anchorOffsetY="30"/>
+	<e:Image id="btnAiJiu" source="aijiuBtn_png" x="102" y="194" anchorOffsetX="98" anchorOffsetY="30"/>
+	<e:Image id="btnHuoLongJiu" source="huolongjiuBtn_png" x="102" y="274" anchorOffsetX="98" anchorOffsetY="30"/>
+	<e:Image id="btnContactMe" source="contactmeBtn_png" x="102" y="353" anchorOffsetX="98" anchorOffsetY="30"/>
+</e:Skin>

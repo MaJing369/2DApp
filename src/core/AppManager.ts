@@ -40,6 +40,5 @@ class App {
         App.LayoutManager.init();
         App.ScenesManager.init(App.LayerManager.sceneLayer);
         App.UIViewManager.init(App.LayerManager.uiLayer);
-        App.EventDispatcher.addEventListener(EventName.SWITCHSCENE,() => { App.ScenesManager.switchScene(View.Page_1,"page1")},this);
     }
 }

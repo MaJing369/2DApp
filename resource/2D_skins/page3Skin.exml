@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="page3Skin" width="480" height="800" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="ZhenJiu_png" x="319" y="30"/>
+	<e:Label y="77" textColor="0x000000" text="针灸是一种中国特有的治疗疾病的手段。它是一种“内病外治”的医术。是通过经络、腧穴的传导作用，以及应用一定的操作法，来治疗全身疾病的。" id="txt1" width="192" height="343" x="275"/>
+	<e:Label id="txt2" y="495" textColor="0x000000" height="254" text="适应症：头痛，三叉神经痛，面神经麻痹，中风后的轻度瘫痪，周围性神经疾患，神经性膀胱功能失调，遗尿，肋间神经痛，颈臂综合征，肩凝症，网球肘，坐骨神经痛，腰痛，关节炎，小儿脑瘫，急、慢性胃炎，便秘，腹泻 ，急、慢性结肠炎等。。。" textAlign="left" width="436" size="30" x="24"/>
+</e:Skin>

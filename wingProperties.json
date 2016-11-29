@@ -146,11 +146,6 @@
 				},
 				{
 					"isFolder":false,
-					"key":"down_bg_png",
-					"name":"down_bg_png"
-				},
-				{
-					"isFolder":false,
 					"key":"zyll_png",
 					"name":"zyll_png"
 				},
@@ -166,13 +161,63 @@
 				},
 				{
 					"isFolder":false,
-					"key":"sc1bg_png_png",
-					"name":"sc1bg_png_png"
+					"key":"bg1_png",
+					"name":"bg1_png"
 				},
 				{
 					"isFolder":false,
-					"key":"bg1_png",
-					"name":"bg1_png"
+					"key":"aijiuBtn_png",
+					"name":"aijiuBtn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"contactmeBtn_png",
+					"name":"contactmeBtn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"huolongjiuBtn_png",
+					"name":"huolongjiuBtn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"tuinaBtn_png",
+					"name":"tuinaBtn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"zhenjiuBtn_png",
+					"name":"zhenjiuBtn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"bg2_png",
+					"name":"bg2_png"
+				},
+				{
+					"isFolder":false,
+					"key":"title_png",
+					"name":"title_png"
+				},
+				{
+					"isFolder":false,
+					"key":"ZhenJiu_png",
+					"name":"ZhenJiu_png"
+				},
+				{
+					"isFolder":false,
+					"key":"aijiu_png",
+					"name":"aijiu_png"
+				},
+				{
+					"isFolder":false,
+					"key":"huolongjiu_png",
+					"name":"huolongjiu_png"
+				},
+				{
+					"isFolder":false,
+					"key":"bg3_png",
+					"name":"bg3_png"
 				}
 			]
 		}

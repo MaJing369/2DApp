@@ -9,6 +9,7 @@ module Core.Views
         public static TILED: string = "tiled";
         public static STRETCH: string = "stretch";
         
+        public isInit:Boolean = false;
         private _content:egret.DisplayObjectContainer;
         private _width:number;
         private _height:number;
@@ -34,6 +35,7 @@ module Core.Views
     	
         public loadFromTexture(textureName: string,effectType:number,displayType: string = Background.NONE): void
     	  {
+            this.isInit = false;
             this._textureName = textureName;
             this._displayType = displayType;
             this._effectType = effectType;
@@ -71,6 +73,7 @@ module Core.Views
     	  
     	  private viewEffectStop():void
     	  {
+        	  this.isInit = true;
         	  App.EventDispatcher.dispatchEvent(new egret.Event(EventName.SWITCHSCENE));
     	  }
     	
