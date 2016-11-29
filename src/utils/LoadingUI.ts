@@ -14,7 +14,7 @@ class LoadingUI extends egret.Sprite {
         RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.onResourceLoadComplete,this);
         this._imgLogo = new eui.Image();
         this._imgLogo.texture = RES.getRes("logo_png");
-        this._imgLogo.anchorOffsetY = this._imgLogo.anchorOffsetX = 110;
+        this._imgLogo.anchorOffsetY = this._imgLogo.anchorOffsetX = 80;
         this._imgLogo.x = (this.stage.stageWidth - this._imgLogo.width) / 2 + 110;
         this._imgLogo.y = (this.stage.stageHeight - this._imgLogo.height) / 2 - 10;
         this.addChild(this._imgLogo);

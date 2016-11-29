@@ -12,6 +12,8 @@ var game_file_list = [
 	"bin-debug/app/scenes/Page1.js",
 	"bin-debug/app/scenes/Page2.js",
 	"bin-debug/app/scenes/Page3.js",
+	"bin-debug/app/scenes/Page4.js",
+	"bin-debug/app/scenes/Page5.js",
 	"bin-debug/app/scenes/TestScene.js",
 	"bin-debug/core/base/BaseEuiView.js",
 	"bin-debug/app/view/BtnView.js",

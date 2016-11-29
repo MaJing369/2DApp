@@ -13,7 +13,7 @@
 			"name":"page1"
 		},
 		{
-			"keys":"bg1_png,bg2_png,bg3_png",
+			"keys":"bg1_png,bg2_png,bg3_png,bg4_png,bg5_png",
 			"name":"common"
 		},
 		{
@@ -29,12 +29,16 @@
 			"name":"page3"
 		},
 		{
-			"keys":"aijiu_png",
+			"keys":"aijiu_png,page4Skin_exml",
 			"name":"page4"
 		},
 		{
-			"keys":"huolongjiu_png",
+			"keys":"huolongjiu_png,page5Skin_exml",
 			"name":"page5"
+		},
+		{
+			"keys":"bg_png,contactMeSkin_exml",
+			"name":"me"
 		}
 	],
 	"resources":[
@@ -272,6 +276,36 @@
 			"name":"bg3_png",
 			"type":"image",
 			"url":"2D_common/bg3.png"
+		},
+		{
+			"name":"bg4_png",
+			"type":"image",
+			"url":"2D_common/bg4.png"
+		},
+		{
+			"name":"bg5_png",
+			"type":"image",
+			"url":"2D_common/bg5.png"
+		},
+		{
+			"name":"page4Skin_exml",
+			"type":"text",
+			"url":"2D_skins/page4Skin.exml"
+		},
+		{
+			"name":"page5Skin_exml",
+			"type":"text",
+			"url":"2D_skins/page5Skin.exml"
+		},
+		{
+			"name":"bg_png",
+			"type":"image",
+			"url":"2D_ui/contactme/bg.png"
+		},
+		{
+			"name":"contactMeSkin_exml",
+			"type":"text",
+			"url":"2D_skins/contactMeSkin.exml"
 		}
 	]
 }

@@ -45,8 +45,6 @@ module View {
 		
         private onBtnClick(e:egret.TouchEvent):void
         {
-            this.touchEnabled = false;
-            this.touchChildren = false;
             this.showBtnMove(e.currentTarget)
             if(this._curSelect && this._curSelect == e.currentTarget) return;
             this._curSelect = e.currentTarget;
@@ -61,10 +59,15 @@ module View {
                     App.ScenesManager.switchScene(View.Page3,"page3")
                     break;
                 case this.btnAiJiu:
+                    App.LayerManager.bg.loadFromTexture("bg4_png",1);
+                    App.ScenesManager.switchScene(View.Page3,"page4")
                     break;
                 case this.btnHuoLongJiu:
+                    App.LayerManager.bg.loadFromTexture("bg5_png",1);
+                    App.ScenesManager.switchScene(View.Page3,"page5")
                     break;
                 case this.btnContactMe:
+                App.UIViewManager.show(View.ContactMeView, "me")
                     break;
             }
         }
@@ -77,8 +80,6 @@ module View {
             egret.Tween.get(btn).to({ alpha: 1,scaleX: 1,scaleY: 1 },800,egret.Ease.backOut).call(()=>
                 { 
                     egret.Tween.removeTweens(btn);
-                    this.touchEnabled = true;
-                    this.touchChildren = true;
                 },this);
         }
 		

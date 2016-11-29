@@ -10,7 +10,7 @@ module Core {
         
         private _skinResName:string;
         protected _active: Boolean = false;
-        protected _scale:number;
+        protected _scale:number = 1;
         protected _canvasWidth:number;
         protected _canvasHeight:number;
         public constructor(skinResName: string) 
@@ -64,8 +64,8 @@ module Core {
                 {
                     this._scale = Math.min(this._canvasWidth / this.width,this._canvasHeight / this.height);
                     this.scaleX = this.scaleY = this._scale;
-                    this.reSize();
                 }
+                this.reSize();
             }
         }
         

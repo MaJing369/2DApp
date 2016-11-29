@@ -1,10 +1,16 @@
 declare class BtnViewSkin extends eui.Skin{
 }
+declare class contactMeSkin extends eui.Skin{
+}
 declare class page1Skin extends eui.Skin{
 }
 declare class page2Skin extends eui.Skin{
 }
 declare class page3Skin extends eui.Skin{
+}
+declare class page4Skin extends eui.Skin{
+}
+declare class page5Skin extends eui.Skin{
 }
 declare module skins{
 	class ButtonSkin extends eui.Skin{
