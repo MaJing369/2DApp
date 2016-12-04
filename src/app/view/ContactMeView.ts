@@ -5,9 +5,10 @@ module View {
 	 *
 	 */
 	export class ContactMeView extends Core.BaseEuiView{
-		public constructor()
+    	private imgClose:eui.Image;
+        public constructor()
 		{
-            super("contactMeSkin_exml");
+            super("contactMeSkin_exml",true);
 		}
 		
 		public destroy():void
@@ -21,7 +22,8 @@ module View {
 		public init():void
 		{
     		this.alpha = 0;
-            egret.Tween.get(this).to({ alpha: 1},800,egret.Ease.backOut)
+            egret.Tween.get(this).to({ alpha: 1},800,egret.Ease.backOut);
+            this.imgClose.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnCloseTap, this);
 		}
 	}
 }

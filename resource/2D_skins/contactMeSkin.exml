@@ -1,4 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="contactMeSkin" width="367" height="361" xmlns:e="http://ns.egret.com/eui">
-	<e:Image source="bg_png" x="0" y="0"/>
+<e:Skin class="contactMeSkin" width="367" height="361" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label text="电话：12345678910" x="53" y="244" width="271" height="37" bold="true" fontFamily="Adobe 黑体 Std R"/>
+	<e:Image id="imgClose" source="close_png" x="296" y="1" width="70" height="68"/>
+	<e:Image source="erweima_png" x="113" y="68"/>
 </e:Skin>

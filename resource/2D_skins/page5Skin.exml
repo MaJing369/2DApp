@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="page5Skin" width="480" height="800" xmlns:e="http://ns.egret.com/eui">
 	<e:Image source="huolongjiu_png" x="312" y="46"/>
-	<e:Label y="95" textColor="0x000000" text="推拿，为一种非药物的自然疗法、物理疗法。中医用手在人体上按经络、穴位，  用推、拿、提、捏、揉等手法进行治疗。" id="txt1" width="186" height="276" x="275"/>
-	<e:Label id="txt2" y="431" textColor="0x000000" height="327" text="适应症：扭伤，关节脱位，腰肌劳损，肌肉萎缩、偏头痛，前头后头痛，三叉神经痛，肋间神经痛，股神经痛，坐骨神经痛，腰背神经痛，四肢关节痛。颜面神经麻痹，颜面肌肉痉挛，腓肠肌痉挛。因风湿而引起的，如肩、背、腰、膝等部的肌肉疼痛。以及急性或慢性风湿性关节炎、关节滑囊肿痛和关节强直等症。其他如神经性呕吐，消化不良症，习惯性便秘，胃下垂，慢性胃炎，失眠，遗精，以及妇女痛经与神经官能症等。" textAlign="left" width="436" size="27" x="23"/>
+	<e:Label y="95" textColor="0x000000" id="txt1" width="186" height="276" x="275"/>
+	<e:Label id="txt2" y="431" textColor="0x000000" height="327" textAlign="left" width="436" size="27" x="23"/>
 </e:Skin>

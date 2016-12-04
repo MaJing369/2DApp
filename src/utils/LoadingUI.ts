@@ -15,7 +15,7 @@ class LoadingUI extends egret.Sprite {
         this._imgLogo = new eui.Image();
         this._imgLogo.texture = RES.getRes("logo_png");
         this._imgLogo.anchorOffsetY = this._imgLogo.anchorOffsetX = 80;
-        this._imgLogo.x = (this.stage.stageWidth - this._imgLogo.width) / 2 + 110;
+        this._imgLogo.x = (this.stage.stageWidth - this._imgLogo.width) / 2 + 80;
         this._imgLogo.y = (this.stage.stageHeight - this._imgLogo.height) / 2 - 10;
         this.addChild(this._imgLogo);
         egret.Tween.get(this._imgLogo,{ loop: true }).to({ rotation: 360 },2000);

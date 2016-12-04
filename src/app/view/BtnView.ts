@@ -46,8 +46,11 @@ module View {
         private onBtnClick(e:egret.TouchEvent):void
         {
             this.showBtnMove(e.currentTarget)
-            if(this._curSelect && this._curSelect == e.currentTarget) return;
-            this._curSelect = e.currentTarget;
+            if(this._curSelect != this.btnContactMe)
+            {
+                if(this._curSelect && this._curSelect == e.currentTarget) return;
+                this._curSelect = e.currentTarget;
+            }
             switch(e.currentTarget)
             {
                 case this.btnTuiNa:
@@ -60,11 +63,11 @@ module View {
                     break;
                 case this.btnAiJiu:
                     App.LayerManager.bg.loadFromTexture("bg4_png",1);
-                    App.ScenesManager.switchScene(View.Page3,"page4")
+                    App.ScenesManager.switchScene(View.Page4,"page4")
                     break;
                 case this.btnHuoLongJiu:
                     App.LayerManager.bg.loadFromTexture("bg5_png",1);
-                    App.ScenesManager.switchScene(View.Page3,"page5")
+                    App.ScenesManager.switchScene(View.Page5,"page5")
                     break;
                 case this.btnContactMe:
                 App.UIViewManager.show(View.ContactMeView, "me")

@@ -9,7 +9,7 @@ module View {
         private txt2: eui.Label;
 
         public constructor() {
-            super("page2Skin_exml");
+            super("page4Skin_exml");
         }
 
         public destroy(): void {

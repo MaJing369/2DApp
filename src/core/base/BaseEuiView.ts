@@ -13,11 +13,16 @@ module Core {
         protected _scale:number = 1;
         protected _canvasWidth:number;
         protected _canvasHeight:number;
-        public constructor(skinResName: string) 
+        private _isModal:Boolean;
+        private _bgMask:Views.BgMask;
+        public constructor(skinResName: string,isModal: Boolean = false) 
 		{
     		super();
+            this._active = true;
             this._skinResName = skinResName;
+            this._isModal = isModal;
             this.skinName = RES.getRes(this._skinResName);
+            this._bgMask = null;
             if(this.skinName == null) throw new Error("皮肤加载失败,skinName:" + skinResName);
 		}
 		
@@ -27,6 +32,7 @@ module Core {
             {
                 this._active = false;
                 this._skinResName = null;
+                this.hideBgMask();
                 App.EventDispatcher.removeEventListener(EventName.STAGE_RESIZE,this.reSize,this);
                 ToolMod.clearDisplayContainer(this);
             }
@@ -39,8 +45,9 @@ module Core {
         
         public onClose():void
         {
-            
         }
+        
+        
         
         protected childrenCreated(): void
         {
@@ -51,7 +58,35 @@ module Core {
                 App.EventDispatcher.addEventListener(EventName.STAGE_RESIZE,this.reSize,this);
             }
             
+            if(this._isModal && this.parent)
+            {
+                this.showBgMask();
+            }
+            
             this.init();
+        }
+        
+        protected onBtnCloseTap(e: egret.TouchEvent): void
+        {
+            App.UIViewManager.close(this);
+        }
+        
+        protected showBgMask(): void 
+        {
+            if(this._bgMask == null) 
+            {
+                this._bgMask = new Views.BgMask(this.parent,true);
+                this._bgMask.show(this.parent.getChildIndex(this));
+            }
+        }
+
+        protected hideBgMask(): void 
+        {
+            if(this._bgMask) 
+            {
+                this._bgMask.destroy();
+                this._bgMask = null;
+            }
         }
         
         private lockViewWithinWindow(): void

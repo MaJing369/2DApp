@@ -37,7 +37,7 @@
 			"name":"page5"
 		},
 		{
-			"keys":"bg_png,contactMeSkin_exml",
+			"keys":"bg_png,contactMeSkin_exml,close_png,erweima_png",
 			"name":"me"
 		}
 	],
@@ -306,6 +306,16 @@
 			"name":"contactMeSkin_exml",
 			"type":"text",
 			"url":"2D_skins/contactMeSkin.exml"
+		},
+		{
+			"name":"close_png",
+			"type":"image",
+			"url":"2D_ui/contactme/close.png"
+		},
+		{
+			"name":"erweima_png",
+			"type":"image",
+			"url":"2D_ui/contactme/erweima.png"
 		}
 	]
 }
